@@ -9,12 +9,12 @@ A staging table (layoffs_staging) was created as a working copy of the raw data 
 Checked for duplicate rows using ROW_NUMBER() and removed them while retaining one legitimate record for each duplicate group.
 
 ### Standardizing Data
-1.Null and blank values were standardized. Blank fields were converted to NULL for easier handling.
-2.Used SQL joins to populate missing values for industry based on other rows with the same company.
+Null and blank values were standardized. Blank fields were converted to NULL for easier handling.
+Used SQL joins to populate missing values for industry based on other rows with the same company.
 
 ### Correcting Variations in Data
-1.Standardized variations in categorical fields like industry (e.g., multiple forms of "Crypto").
-2.Removed trailing periods and fixed formatting inconsistencies in country fields
+Standardized variations in categorical fields like industry (e.g., multiple forms of "Crypto").
+Removed trailing periods and fixed formatting inconsistencies in country fields
 
 ### Handling Date Columns
 Converted date fields to a standard DATE format using STR_TO_DATE and updated the column datatype
